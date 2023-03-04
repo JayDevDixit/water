@@ -1,0 +1,48 @@
+body {
+  background-color: black;
+  height: 100vh;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#progress {
+  font-family: cursive;
+  font-weight: bold;
+  font-size: 5vmin;
+  color: blue;
+  position: absolute;
+  z-index: 2;
+}
+#ball {
+  height: 50vmin;
+  width: 50vmin;
+  /* border: 1px solid red; */
+  overflow: hidden;
+  position: relative;
+  border-radius: 50%;
+
+  box-shadow: 15px 15px 30px rgb(25, 25, 25), -15px -15px 30px rgb(60, 60, 60);
+
+}
+#fluid {
+  height: 80vmin;
+  width: 80vmin;
+  background: linear-gradient(to bottom left, rgb(32, 32, 239), skyblue, gray);
+  position: absolute;
+  border-radius: 35%;
+  left: -10vmin;
+  bottom: -80vmin;
+  animation-name: x;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: ease-out;
+}
+
+@keyframes x {
+  100% {
+    bottom: -30vmin;
+    transform: rotate(360deg);
+  }
+}
